@@ -15,7 +15,9 @@ public class JdbcTemplateDemo1 {
         //2、创建对象
         JdbcTemplate jt = ac.getBean("jdbcTemplate",JdbcTemplate.class);
 
+        String sql = "create table count(name varchar(20),age int);";
+
         //3、执行操作
-        jt.execute("insert into account (name,age) values ('Jack',18)");
+        jt.execute(sql);
     }
 }
